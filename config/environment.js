@@ -20,6 +20,11 @@ module.exports = function(environment) {
       hostWhitelist: [/localhost:\d+/],
     },
 
+    sentry: {
+      dsn: 'https://67b63f7334124120b24912d4fe739247@app.getsentry.com/1438738',
+      development: true,
+    },
+
     'place-autocomplete': {
       key: process.env.AUTOCOMPLETE_API_KEY
     },
