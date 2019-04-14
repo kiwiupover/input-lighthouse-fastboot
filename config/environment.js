@@ -16,6 +16,9 @@ module.exports = function(environment) {
         Date: false
       }
     },
+    fastboot: {
+      hostWhitelist: [/localhost:\d+/],
+    },
 
     'place-autocomplete': {
       key: process.env.AUTOCOMPLETE_API_KEY
