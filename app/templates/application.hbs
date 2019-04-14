@@ -4,6 +4,16 @@
     <h1 class='text-white text-5xl text-center mt-12'>Fastboot Lighthouse Testing</h1>
     <p class='text-white text-xl text-center mt-2'>How fast can we go?!</p>
     <div class="flex justify-center mt-4">
+      <p id="message">{{message}}</p>
+      <p>Address: {{model.address}}</p>
+      {{place-autocomplete-field
+        inputClass= 'place-autocomplete--input'
+        onBlurCallback=(action "done")
+        placeChangedCallback=(action "placeChanged")
+        placeholder="Custom placeholder"
+        preventSubmit=true
+      }}
+
       <form class="w-full max-w-md bg-white p-6 mt-4 rounded">
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -60,8 +70,6 @@
         </div>
       </form>
     </div>
-
-
   </div>
 </div>
 
