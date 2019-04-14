@@ -5,6 +5,6 @@ export default Component.extend({
   tagName: '',
 
   cards: computed(function() {
-    return new Array(64);
+    return new Array(60);
   })
 });

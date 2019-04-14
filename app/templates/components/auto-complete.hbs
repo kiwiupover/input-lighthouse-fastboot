@@ -1,16 +1,16 @@
 <div class="flex items-center bg-white rounded my-4 pl-6">
   <label for="auto-complete">Search:</label>
   {{place-autocomplete-field
-    id=(concat 'auto-complete-' @indexId)
-    class='flex w-full place-autocomplete--input'
-    inputClass= 'h-16 p-4 flex-1'
+    id=(concat "auto-complete-" @indexId)
+    class="flex w-full place-autocomplete--input"
+    inputClass= "h-16 p-4 flex-1"
     onBlurCallback=(action "done")
     placeChangedCallback=(action "placeChanged")
     placeholder="Where do you want to go fast"
     preventSubmit=true
   }}
-  <p id={{concat 'message-' @indexId}}>{{message}}</p>
-  <p class='pr-4'>Address: {{address}}</p>
+  <p id={{concat "message-" @indexId}}>{{message}}</p>
+  <p class="pr-4">Address: {{address}}</p>
   <button class="bg-blue hover:bg-blue-dark text-white font-bold py-6 px-10 rounded rounded-l-none">
     Search
   </button>
