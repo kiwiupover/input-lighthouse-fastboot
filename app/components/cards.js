@@ -4,7 +4,8 @@ import { computed } from '@ember/object';
 export default Component.extend({
   tagName: '',
 
-  cards: computed(function() {
-    return new Array(600);
+  cards: computed('count', function() {
+    console.log('this.count', this.count);
+    return new Array(this.count);
   })
 });
