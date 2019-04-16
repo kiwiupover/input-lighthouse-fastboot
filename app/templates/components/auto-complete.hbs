@@ -8,6 +8,7 @@
     placeChangedCallback=(action "placeChanged")
     placeholder="Where do you want to go fast"
     preventSubmit=true
+    disabled=(if fastboot.isFastBoot 'true')
   }}
   <p id={{concat "message-" @indexId}}>{{message}}</p>
   <p class="pr-4">Address: {{address}}</p>

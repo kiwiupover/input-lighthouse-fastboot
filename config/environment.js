@@ -60,7 +60,7 @@ module.exports = function(environment) {
     ENV.sentry.development = false;
     ENV.sentry.debug = false;
     ENV.fastboot = {
-      hostWhitelist: [/herokuapp.com/],
+      hostWhitelist: [/localhost:\d+/, /herokuapp.com/],
     }
   }
 
