@@ -23,10 +23,11 @@ module.exports = function(environment) {
     sentry: {
       dsn: 'https://67b63f7334124120b24912d4fe739247@app.getsentry.com/1438738',
       development: true,
+      debug: true
     },
 
     'place-autocomplete': {
-      key: process.env.AUTOCOMPLETE_API_KEY
+      key: process.env.AUTOCOMPLETE_API_KEY || ''
     },
 
     APP: {
@@ -56,7 +57,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.sentry.development = false;
+    ENV.sentry.debug = false;
   }
 
   return ENV;
