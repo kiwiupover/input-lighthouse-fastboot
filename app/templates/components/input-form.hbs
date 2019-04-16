@@ -84,5 +84,22 @@
           placeholder="98115"}}
       </div>
     </div>
+    <div class="flex w-full mt-6">
+      <div class="w-full">
+        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
+          Message
+        </label>
+        {{textarea
+          class="
+            appearance-none block w-full bg-grey-lighter text-grey-darker
+            border border-grey-lighter rounded py-3 px-4 leading-tight
+            focus:outline-none focus:bg-white focus:border-grey
+          "
+          id=(concat @indexId "-message")
+          disabled=(if this.fastboot.isFastBoot "true")
+          autocomplete="zip"
+          placeholder="Enter your message"}}
+      </div>
+    </div>
   </form>
 </div>
