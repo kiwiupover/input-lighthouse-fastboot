@@ -59,6 +59,9 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.sentry.development = false;
     ENV.sentry.debug = false;
+    ENV.fastboot = {
+      hostWhitelist: [/herokuapp.com/],
+    }
   }
 
   return ENV;
