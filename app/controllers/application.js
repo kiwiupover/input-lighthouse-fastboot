@@ -3,19 +3,20 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   queryParams: [
-    'autocompletesCount',
-    'inputFormsCount',
-    'cardsCount'
+    'autocompleteCount',
+    'inputFormCount',
+    'cardCount'
   ],
-  autocompletesCount: 2,
-  inputFormsCount: 4,
-  cardsCount: 16,
+
+  autocompleteCount: 2,
+  inputFormCount: 4,
+  cardCount: 16,
 
   autocompletes: computed(function() {
-    return new Array(this.autocompletesCount);
+    return new Array(this.autocompleteCount);
   }),
 
   inputForms: computed(function() {
-    return new Array(this.inputFormsCount);
+    return new Array(this.inputFormCount);
   })
 });

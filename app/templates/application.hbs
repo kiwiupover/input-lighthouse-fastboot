@@ -3,12 +3,14 @@
   <div class="container mx-auto">
     <h1 class="text-white text-5xl text-center mt-12">Fastboot Lighthouse Testing</h1>
     <p class="text-white text-xl text-center mt-2">How fast can we go?!</p>
+    <h2 class="mt-4">Auto complete: {{autocompletes.length}}</h2>
     {{#each autocompletes as |a index|}}
       <AutoComplete @indexId={{index}}/>
     {{/each}}
   </div>
 </div>
 <div class="container mx-auto">
+  <h2 class="mt-4">Input forms: {{inputForms.length}}</h2>
   {{#each inputForms as |i index|}}
     <InputForm @indexId={{index}}/>
   {{/each}}
@@ -16,7 +18,8 @@
 
 {{outlet}}
 <div class="container mx-auto">
-  <Cards @count={{this.cardsCount}} />
+  <h2 class="mt-4 ml-4">Cards Count: {{this.cardCount}}</h2>
+  <Cards @count={{this.cardCount}} />
 </div>
 
 <Footer />
