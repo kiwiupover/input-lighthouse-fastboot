@@ -12,11 +12,11 @@ export default Controller.extend({
   inputFormCount: 4,
   cardCount: 16,
 
-  autocompletes: computed(function() {
+  autocompletes: computed('autocompleteCount', function() {
     return new Array(this.autocompleteCount);
   }),
 
-  inputForms: computed(function() {
+  inputForms: computed('inputFormCount', function() {
     return new Array(this.inputFormCount);
   })
 });
